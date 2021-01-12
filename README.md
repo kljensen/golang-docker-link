@@ -8,8 +8,9 @@ example.
 
 In `main.go` I am starting two containers, each of which is attached to a Docker
 [user defined network](https://docs.docker.com/network/). One container is running
-[go-httpbin](https://github.com/mccutchen/go-httpbin), which is a clone of [Kenneth Reitz][kr]'s
-[httpbin][httpbin-org] service. The other container runs the [curl](https://hub.docker.com/r/curlimages/curl) HTTP client. `curl` is used to place an HTTP request to the `go-httpbin`
+[go-httpbin](https://github.com/mccutchen/go-httpbin), which is a clone of
+[Kenneth Reitz's](https://kennethreitz.org/)
+[httpbin](https://httpbin.org/) service. The other container runs the [curl](https://hub.docker.com/r/curlimages/curl) HTTP client. `curl` is used to place an HTTP request to the `go-httpbin`
 container. After the request, both containers are shut down.
 
 ## Running the code
