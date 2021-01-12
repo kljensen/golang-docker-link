@@ -30,4 +30,4 @@ You can run the code with `go run main.go` and you should see output like
 {"args":{"foo":["bar"]},"headers":{"Accept":["*/*"],"Host":["httpbin:8080"],"User-Agent":["curl/7.74.0-DEV"]},"origin":"192.168.0.3:40894","url":"http://httpbin:8080/get?foo=bar"}
 ```
 
-The final like is the JSON-formatted HTTP response from `curl`.
+The final line is the JSON-formatted HTTP response from `curl`.
