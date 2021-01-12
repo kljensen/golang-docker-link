@@ -1,4 +1,11 @@
-# Golang Docker Container Link Example
+<h1 align="center">
+  <span>
+    <img src="https://raw.githubusercontent.com/egonelbre/gophers/master/vector/projects/network-side.svg"  height="50px"><img src="https://raw.githubusercontent.com/egonelbre/gophers/master/vector/projects/network.svg"  height="50px">
+  </span><br>
+  Golang Docker Container Link Example 
+</h1>
+
+
 
 I found many examples online wherein developers use the 
 [Go client for the Docker Engine API](https://pkg.go.dev/github.com/docker/docker/client)
