@@ -89,7 +89,7 @@ func main() {
 		},
 	}
 
-	// Create both containers
+	// Create and start the httpbin container
 	httpBinResp, err := apiClient.ContainerCreate(ctx, httpBinConfig, nil, httpBinNetworkConfig, nil, "")
 	if err != nil {
 		panic(err)
@@ -99,6 +99,11 @@ func main() {
 		panic(err)
 	}
 
+	// Stop the httpbin container on panic or when `main` returns
+	timeout := 5 * time.Second
+	defer apiClient.ContainerStop(ctx, httpBinResp.ID, &timeout)
+
+	// Create and start the curl container
 	curlResp, err := apiClient.ContainerCreate(ctx, curlConfig, nil, curlNetworkConfig, nil, "")
 	if err != nil {
 		panic(err)
@@ -124,8 +129,4 @@ func main() {
 		panic(err)
 	}
 	stdcopy.StdCopy(os.Stdout, os.Stderr, out)
-
-	// Stop the httpbin container
-	timeout := 5 * time.Second
-	apiClient.ContainerStop(ctx, httpBinResp.ID, &timeout)
 }
