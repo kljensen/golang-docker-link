@@ -70,6 +70,8 @@ func main() {
 	// Create network config for the curl Docker container
 	curlNetworkConfig := &network.NetworkingConfig{
 		EndpointsConfig: map[string]*network.EndpointSettings{
+			// I don't think the "net" key matters here. I believe
+			// it could just as easily be "foo" or "blah".
 			"net": {
 				NetworkID: networkResult.ID,
 			},
