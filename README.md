@@ -1,6 +1,6 @@
 <h1 align="center">
-  <span>
-    <img src="https://raw.githubusercontent.com/egonelbre/gophers/master/vector/projects/network-side.svg"  height="50px"><img src="https://raw.githubusercontent.com/egonelbre/gophers/master/vector/projects/network.svg"  height="50px">
+  <span >
+    <img src="https://raw.githubusercontent.com/egonelbre/gophers/master/vector/projects/network-side.svg"  height="50px">···<img src="https://raw.githubusercontent.com/egonelbre/gophers/master/vector/projects/network.svg"  height="50px">
   </span><br>
   Golang Docker Container Link Example 
 </h1>
